@@ -1,9 +1,12 @@
 {
   "name": "Engineering Symbols Tool",
-  "id": "1156463937041193503",
+  "id": "1564995746782047272",
   "api": "1.0.0",
-  "editorType": ["figma"],
+  "editorType": [
+    "figma"
+  ],
   "permissions": [],
   "main": "dist/code.js",
-  "ui": "dist/index.html"
+  "ui": "dist/index.html",
+  "documentAccess": "dynamic-page"
 }
