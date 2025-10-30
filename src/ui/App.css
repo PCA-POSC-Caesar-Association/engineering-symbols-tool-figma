@@ -58,13 +58,17 @@ button {
   /* cursor: default; */
   border: 1px solid var(--color-border);
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
+
 button:hover {
   background-color: var(--color-bg-hover);
 }
+
 button:active {
   background-color: var(--color-bg-active);
 }
+
 button.active {
   background-color: var(--color-bg-active);
 }
@@ -73,6 +77,7 @@ button:focus-visible {
   border: none;
   outline-color: var(--color-border-focus);
 }
+
 button.brand {
   --color-bg: var(--color-bg-brand);
   --color-text: var(--color-text-brand);
@@ -81,6 +86,7 @@ button.brand {
   --color-border: transparent;
   --color-border-focus: var(--color-border-brand-focus);
 }
+
 button.brand-disabled:hover {
   --color-bg-hover: transparent;
 }
@@ -110,18 +116,25 @@ svg {
   /* Foreground, Background */
   scrollbar-color: var(--figma-color-bg-disabled-secondary) transparent;
 }
+
 .styled-scrollbars::-webkit-scrollbar {
-  width: 20px; /* Mostly for vertical scrollbars */
-  height: 20px; /* Mostly for horizontal scrollbars */
+  width: 20px;
+  /* Mostly for vertical scrollbars */
+  height: 20px;
+  /* Mostly for horizontal scrollbars */
   background-color: transparent;
 }
+
 .styled-scrollbars::-webkit-scrollbar-thumb {
   width: 6px;
   border-radius: 10px;
   background-color: var(--figma-color-bg-disabled-secondary);
 }
+
 .styled-scrollbars::-webkit-scrollbar-track {
   background-color: transparent;
-  width: 15px; /* Mostly for vertical scrollbars */
-  height: 15px; /* Mostly for horizontal scrollbars */
+  width: 15px;
+  /* Mostly for vertical scrollbars */
+  height: 15px;
+  /* Mostly for horizontal scrollbars */
 }
