@@ -16,8 +16,8 @@ function getSelectionChangedUiMsg(): SelectionChangedMessage {
 
 figma.showUI(__html__, {
   title: "Engineering Symbols Tool",
-  height: 450,
-  width: 450,
+  height: 500,
+  width: 500,
   themeColors: true,
 } as ShowUiOptionsExtended);
 
