@@ -18,7 +18,7 @@
   text-align: left;
   padding: 10px;
   margin: 0 25px;
-  background: var(--figma-color-bg-danger);
+  background: rgba(178, 31, 31, 0.571);
   color: var(--figma-color-text-ondanger);
 }
 
@@ -62,4 +62,36 @@
   padding: 0 25px;
   height: 40px;
   border-bottom: 1px solid var(--color-border, #e5e5e5);
+}
+
+.size-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.warning-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.size-warning {
+  position: absolute;
+  transform: translateX(-100%);
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  background-color: rgba(178, 31, 31, 0.571);
+  opacity: 0;
+  /* hidden by default */
+  pointer-events: none;
+  /* prevents interfering when hidden */
+  transition: opacity 0.2s ease;
+}
+
+.warning-container:hover .size-warning {
+  opacity: 1;
+  /* show on hover */
+  pointer-events: auto;
 }
