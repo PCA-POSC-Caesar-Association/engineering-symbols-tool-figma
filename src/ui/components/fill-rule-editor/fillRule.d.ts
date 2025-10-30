@@ -7,3 +7,4 @@ export function updateNode(nodeData: SymbolVectorData): void;
 export function setOnNodeMutatedCallback(
   callback: (nodeData: SymbolVectorData) => void
 ): void;
+export function hasOddEvenPaths(): boolean; 

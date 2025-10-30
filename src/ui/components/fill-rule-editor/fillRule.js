@@ -5,8 +5,8 @@ let node;
 let hover;
 let prevMouse;
 
-let nonzeroColor = "rgba(63, 159, 255, 0.25)";
-let evenoddColor = "rgba(255, 127, 0, 0.25)";
+let nonzeroColor = "rgb(19, 164, 14)";
+let evenoddColor = "rgb(178, 31, 31)";
 let hoverNonzeroColor = nonzeroColor;
 let hoverEvenoddColor = evenoddColor;
 let geometryColor = "#777";
@@ -191,6 +191,15 @@ function createDiagonalPattern(color, callback) {
       <path fill="${color}" d="M0 4V0H4L12 8V12H8L0 4M12 4V0H8L12 4M0 12V8L4 12H0Z" />
     </svg>
   `);
+}
+
+export const hasOddEvenPaths = () => {
+  if (!node || !node.vectorNetwork) return false;
+
+  //Check if any region is EVENODD
+  const hasEvenodd = !!node.vectorNetwork.regions.some((region) => region.windingRule === "EVENODD");
+  return hasEvenodd;
+
 }
 
 function hasVertex(seg, index) {

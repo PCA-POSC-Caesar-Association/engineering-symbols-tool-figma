@@ -6,6 +6,7 @@ import {
   setContainer,
   updateNode,
   setOnNodeMutatedCallback,
+  hasOddEvenPaths
 } from "./fillRule";
 import {
   SymbolContext,
@@ -78,8 +79,17 @@ export function FillRuleEditor() {
     );
 
   return (
-    <div ref={containerRef} id="container" className="explore">
-      <canvas ref={canvasRef}></canvas>
-    </div>
+    <>
+      {hasOddEvenPaths() ?
+        <div className="help-text-container odd-even-text">
+          Click the odd-even paths areas marked in red to convert them to non-zero
+        </div> :
+        <div className="help-text-container nonzero-text">
+          All paths fulfulls the non-zero rule
+        </div>}
+      <div ref={containerRef} id="container" className="explore">
+        <canvas ref={canvasRef}></canvas>
+      </div>
+    </>
   );
 }
