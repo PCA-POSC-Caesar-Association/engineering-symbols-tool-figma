@@ -2,8 +2,6 @@
 
 A Figma plugin for creating Engineering Symbols.
 
-> NOTE: This plugin has not yet been published on the [Figma Community](https://www.figma.com/community/plugins) platform.
-
 ## Development Setup
 
 ### Build plugin
@@ -33,6 +31,14 @@ Select the repository folder containing the `manifest.json` file.
 # Run watch mode for both UI and Figma code
 npm run dev
 ```
+
+### How to inspect element in figma
+Windows: 
+>``` Ctrl + Alt + I ```
+
+Mac:
+>``` Cmd + Option + I ```
+
 
 ## Manual Distribution
 
