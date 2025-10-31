@@ -3,13 +3,18 @@ div.explore {
   width: 100vw;
   height: calc(100vh - 40px);
   overflow: hidden;
-  /* background: green; */
-  /* text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
 }
-/* canvas {
-  background: red;
-  opacity: 0.5;
-} */
+
+
+.help-text-container {
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  padding: 10px 0;
+}
+
+.odd-even-text {
+  background-color: rgba(178, 31, 31, 0.571);
+}
+
+.nonzero-text {
+  background-color: rgba(19, 164, 14, 0.571);
+}

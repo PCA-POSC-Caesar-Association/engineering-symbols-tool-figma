@@ -8,6 +8,7 @@ import { postMessageToPlugin } from "../../helpers/pluginHelpers";
 import { ErrorContent } from "../error-content";
 import { cleanPreview } from "../../helpers/svgHelpers";
 import { EsSymbolUi } from "../../../plugin/types";
+import Warning from "../error-content/Warning.svg?react"
 
 export function ExportTab() {
   const { symbol, previewSvgString, validationErrors, isValid } = useContext(
@@ -77,7 +78,6 @@ export function ExportTab() {
       payload: { nodeId: symbol.id },
     });
   };
-
   if (symbol) {
     return (
       <div className="symbolContainer">
@@ -85,12 +85,20 @@ export function ExportTab() {
           <div className="head">
             <h2>{symbol.name}</h2>
             {preview && <h4 className="previewHeader">Preview @ {fPreview}</h4>}
-            <p>
-              <span className="secondary-color ">W</span>&nbsp;&nbsp;
-              {symbol.width}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="secondary-color ">H</span>&nbsp;&nbsp;
-              {symbol.height}
-            </p>
+            <div className="size-container">
+              <p>
+                <span className="secondary-color ">W</span>&nbsp;&nbsp;
+                {symbol.width}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="secondary-color ">H</span>&nbsp;&nbsp;
+                {symbol.height}
+              </p>
+
+              {(symbol.width % 12 != 0 || symbol.height % 12 != 0) &&
+                <div className="warning-container">
+                  <Warning fill="#f24822" scale={1} strokeWidth={0} width={28} height={28} />
+                  <div className="size-warning">PCA Symbol Editor requires width and height to be on a 12 mulitple</div>
+                </div>}
+            </div>
           </div>
 
           <div className="main">
