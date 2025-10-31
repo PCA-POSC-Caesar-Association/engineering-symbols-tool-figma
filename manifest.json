@@ -7,5 +7,6 @@
   ],
   "permissions": [],
   "main": "dist/code.js",
-  "ui": "dist/index.html"
+  "ui": "dist/index.html",
+  "icon": "src/icons/pca-blue-square.png"
 }
