@@ -1,8 +1,8 @@
 import { SymbolVectorData } from "./types";
 
-export function updateSymbolVectorNetwork(vectorData: SymbolVectorData) {
-  const node = figma.getNodeById(vectorData.id);
+export async function updateSymbolVectorNetwork(vectorData: SymbolVectorData) {
+  const node = await figma.getNodeByIdAsync(vectorData.id);
   if (node !== null && node.type === "VECTOR") {
-    node.vectorNetwork = vectorData.vectorNetwork;
+    await node.setVectorNetworkAsync(vectorData.vectorNetwork);
   }
 }
