@@ -17,4 +17,7 @@ export default defineConfig({
     outDir: "../../dist",
     rollupOptions: {},
   },
+  esbuild: {
+    tsconfigRaw: require("./src/ui/tsconfig.json"),
+  }
 });
