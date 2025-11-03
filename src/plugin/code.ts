@@ -21,7 +21,7 @@ figma.showUI(__html__, {
   themeColors: true,
 } as ShowUiOptionsExtended);
 
-figma.ui.onmessage = (msg: PluginAction) => {
+figma.ui.onmessage = async (msg: PluginAction) => {
   switch (msg.type) {
     case "create-export-vector":
       createExportVectorFromNodeIdOrNodes(msg.payload.nodeId);
@@ -37,7 +37,7 @@ figma.ui.onmessage = (msg: PluginAction) => {
       exportAsSvg(msg.payload.nodeId);
       break;
     case "export-vector-network-updated":
-      updateSymbolVectorNetwork(msg.payload.symbolVectorData);
+      await updateSymbolVectorNetwork(msg.payload.symbolVectorData);
       createPreviewBlob(msg.payload.nodeId);
       break;
     case "request-preview":
