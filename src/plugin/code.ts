@@ -37,9 +37,7 @@ figma.ui.onmessage = async (msg: PluginAction) => {
       exportAsSvg(msg.payload.nodeId);
       break;
     case "export-vector-network-updated":
-      console.log("updating vector network,,,")
       await updateSymbolVectorNetwork(msg.payload.symbolVectorData);
-      console.log("vector updated")
       createPreviewBlob(msg.payload.nodeId);
       break;
     case "request-preview":
